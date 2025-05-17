@@ -23,7 +23,7 @@ const SetonEmbed = ({ url }) => {
   return (
     <EmbedContainer>
       <iframe
-        style="border: 0"
+        style={{ border: 0 }}
         className="w-100 h-100"
         src={`${url}?embed=true`}
       />
