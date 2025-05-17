@@ -171,13 +171,11 @@ const useRenderEmbed = (
     },
     {
       name: 'Seton',
-      regexs: [
-        /https:\/\/prod\.11dun\.com\/share\/[a-zA-Z0-9_-]+\/view/,
-      ],
+      regexs: [/https:\/\/prod\.setonink\.com\/share\/[a-zA-Z0-9_-]+\/view/],
       embed: (_, url) => {
         return <SetonEmbed url={url} />;
       },
-    }
+    },
   ];
 
   const filteredEmbeds = embeds.filter((embed) => {
