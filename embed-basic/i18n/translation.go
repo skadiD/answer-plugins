@@ -33,4 +33,5 @@ const (
 	ConfigOptionLoom        = "plugin.basic_embed.backend.config.options.loom"
 	ConfigOptionTwitter     = "plugin.basic_embed.backend.config.options.twitter"
 	ConfigOptionYoutube     = "plugin.basic_embed.backend.config.options.youtube"
+	ConfigOptionSeton       = "plugin.basic_embed.backend.config.options.seton"
 )

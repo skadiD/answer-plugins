@@ -29,6 +29,7 @@ import {
   LoomEmbed,
   DropboxEmbed,
   TwitterEmbed,
+  SetonEmbed,
 } from './components';
 import { Request } from './types';
 
@@ -168,6 +169,15 @@ const useRenderEmbed = (
         return <DropboxEmbed dropboxId={dropboxId} />;
       },
     },
+    {
+      name: 'Seton',
+      regexs: [
+        /https:\/\/prod\.11dun\.com\/share\/[a-zA-Z0-9_-]+\/view/,
+      ],
+      embed: (_, url) => {
+        return <SetonEmbed url={url} />;
+      },
+    }
   ];
 
   const filteredEmbeds = embeds.filter((embed) => {

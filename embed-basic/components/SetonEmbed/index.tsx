@@ -17,26 +17,18 @@
  * under the License.
  */
 
-import GithubGistEmbed from './GithubGistEmbed';
-import CodePenEmbed from './CodePenEmbed';
-import YouTubeEmbed from './YouTubeEmbed';
-import JSFiddleEmbed from './JSFiddleEmbed';
-import FigmaEmbed from './FigmaEmbed';
-import ExcalidrawEmbed from './ExcalidrawEmbed';
-import LoomEmbed from './LoomEmbed';
-import DropboxEmbed from './DropboxEmbed';
-import TwitterEmbed from './TwitterEmbed';
-import SetonEmbed from './SetonEmbed';
+import EmbedContainer from '../EmbedContainer';
 
-export {
-  GithubGistEmbed,
-  CodePenEmbed,
-  YouTubeEmbed,
-  JSFiddleEmbed,
-  FigmaEmbed,
-  ExcalidrawEmbed,
-  LoomEmbed,
-  DropboxEmbed,
-  TwitterEmbed,
-  SetonEmbed,
+const SetonEmbed = ({ url }) => {
+  return (
+    <EmbedContainer>
+      <iframe
+        style="border: 0"
+        className="w-100 h-100"
+        src={`${url}?embed=true`}
+      />
+    </EmbedContainer>
+  );
 };
+
+export default SetonEmbed;
